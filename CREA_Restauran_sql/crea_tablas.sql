@@ -51,6 +51,7 @@ CREATE TABLE IF NOT EXISTS item_pedidos (
     id_produto INTEGER REFERENCES produtos(id),
     cantidade INTEGER NOT NULL,
     preco REAL NOT NULL,
+    id_status_pedido INTEGER REFERENCES status_pp(id),
     ativo BOOLEAN DEFAULT TRUE,
     data_criacao TIMESTAMP NOT NULL DEFAULT (datetime('now','localtime'))
 );
